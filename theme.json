@@ -168,6 +168,13 @@
 				}
 			},
 			"core/pullquote": {
+				"elements": {
+					"cite":{
+						"typography": {
+							"fontSize": "var(--wp--preset--font-size--medium)"
+						}
+					}
+				},
 				"spacing": {
 					"padding": {
 						"bottom": "var(--wp--preset--spacing--50)",
