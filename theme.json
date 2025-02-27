@@ -169,7 +169,7 @@
 			},
 			"core/pullquote": {
 				"elements": {
-					"cite":{
+					"cite": {
 						"typography": {
 							"fontSize": "var(--wp--preset--font-size--medium)"
 						}
@@ -283,6 +283,15 @@
 			"title": "Sidebar"
 		}
 	],
+	"customTemplates": [
+	{
+		"name": "wp-custom-template-full-width-page",
+		"title": "Full Width Page",
+		"postTypes": [
+			"page"
+		]
+	}
+],
 	"version": 3,
 	"$schema": "https://schemas.wp.org/wp/6.7/theme.json"
 }
