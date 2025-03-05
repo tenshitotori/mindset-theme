@@ -51,7 +51,7 @@ export default function Edit( {attributes, setAttributes} ) {
 	const [meta, setMeta] = useEntityProp('postType', 'page', 'meta', postID);
  
 	// Destructure all our meta data for ease of use
-	const { company_email } = meta;
+	const { company_email } = meta || {};
  
 	// Flexible helper for setting a single meta value w/o mutating state
 	const updateMeta = ( key, value ) => {

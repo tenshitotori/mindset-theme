@@ -5,8 +5,11 @@
  * Replace them with your own styles or remove the file completely.
  */
 
-.wp-block-mindset-blocks-service-posts {
-	background-color: #21759b;
-	color: #fff;
-	padding: 2px;
+.services-nav {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	border: 4px double var(--wp--preset--color--accent);
+	padding: 1rem;
+	gap: 1rem;
 }
