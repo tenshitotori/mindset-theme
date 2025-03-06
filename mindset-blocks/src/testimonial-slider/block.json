@@ -22,10 +22,9 @@
             "default": true
         },
         "arrowColor": {
-        "type": "string",
-        "default": "#000000"
-    }
-
+            "type": "string",
+            "default": "#000000" 
+        }
     },
     "textdomain": "testimonial-slider",
     "editorScript": "file:./index.js",

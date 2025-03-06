@@ -1,14 +1,22 @@
+/**
+* Imports.
+*/
 import { __ } from '@wordpress/i18n';
-import { InspectorControls, useBlockProps, PanelColorSettings } from '@wordpress/block-editor';
-import { PanelBody, PanelRow, ToggleControl } from '@wordpress/components';
+import { InspectorControls, useBlockProps } from '@wordpress/block-editor';
+import { PanelBody, PanelRow, ToggleControl, PanelColorSettings } from '@wordpress/components';
 import ServerSideRender from '@wordpress/server-side-render';
 import { SwiperInit } from './swiper-init';
 
+/**
+* Export.
+*/
 export default function Edit( { attributes, setAttributes } ) {
     const { navigation, pagination, arrowColor } = attributes;
 
-    // Create CSS custom property
-    const blockStyles = { '--arrow-color': arrowColor };
+    // Define custom styles using the arrowColor attribute
+    const blockStyles = { '--testimonial-arrow-color': arrowColor };
+
+    const swiper = SwiperInit( '.swiper', { navigation, pagination } );
 
     return (
         <>
@@ -32,7 +40,6 @@ export default function Edit( { attributes, setAttributes } ) {
                     </PanelRow>
                 </PanelBody>
 
-                {/* Add Color Picker */}
                 <PanelColorSettings
                     title={ __( 'Arrow Color', 'testimonial-slider' ) }
                     colorSettings={[
@@ -45,7 +52,7 @@ export default function Edit( { attributes, setAttributes } ) {
                 />
             </InspectorControls>
 
-            <div { ...useBlockProps( { style: blockStyles } ) }>
+            <div { ...useBlockProps({ style: blockStyles }) }>
                 <ServerSideRender block="mindset-blocks/testimonial-slider" attributes={ attributes } />
             </div>
         </>
